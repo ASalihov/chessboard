@@ -1,0 +1,94 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.vertical-center{
+    display:flex;
+    align-items:center;
+}
+
+.inputs{
+    padding-left:30px;
+}
+
+.white {
+    width: 90px;
+    height: 90px;
+    background-color: #d0cbcb;
+}
+
+.black {
+    width: 75px;
+    height: 75px;
+    background-color: #1f0c0c;
+}
+
+th, td {
+    text-align: center;
+}
+
+
+.figure {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 12px 12px;
+}
+
+.pawn {
+    background-image: url("pawn.png");
+}
+
+.bishop {
+    background-image: url("bishop.png");
+}
+
+.king {
+    background-image: url("king.png");
+}
+
+.knight {
+    background-image: url("knight.png");
+}
+
+.queen {
+    background-image: url("queen.png");
+}
+
+.rook {
+    background-image: url("rook.png");
+}
+
+.shadow {
+}
+
+    .shadow.black {
+        box-shadow: 0 0 3px 3px #4e2203 inset;
+        background-color: #555;
+    }
+
+    .shadow.white {
+        box-shadow: 0 0 3px 3px #4e2203 inset;
+        background-color: #ddd;
+    }

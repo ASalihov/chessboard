@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron vertical-center">
+    <div class="container">
+        <div class="form-group form-inline inputs">
+            <input type="text" class="form-control" id="char" />
+            <input type="number" class="form-control" id="num" />
+            <button type="button" class="btn btn-primary" id="moveBtn">Move!</button>
+            <button type="button" class="btn btn-danger" id="resetBtn">Reset</button>
+        </div>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>D</th>
+                    <th>E</th>
+                    <th>F</th>
+                    <th>G</th>
+                    <th>H</th>
+                </tr>
+            </thead>
+            @for (int i = 1, j = 8; i <= 8; i++, j--)
+            {
+                var c = i % 2 == 0 ? 0 : 1;
+                <tr>
+                    <th style="padding-right:15px">@j</th>
+                    @for (int y = i, ch = 65; y < 8 + i; y++, ch++)
+                {
+                    var st = y % 2 == 0 ? "black" : "white";
+                    var chr = (char)ch;
+                        <td class="@st" id="@chr@j"></td>
+                    }
+                </tr>
+            }
+        </table>
+    </div>
+</div>
